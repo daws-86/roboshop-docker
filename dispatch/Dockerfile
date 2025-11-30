@@ -4,7 +4,7 @@ FROM golang:1.20 AS builder
 WORKDIR /app
 
 # Copy go files
-COPY go.mod go.sum ./
+COPY go.mod ./
 RUN go mod download
 
 COPY . .
